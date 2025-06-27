@@ -1,5 +1,8 @@
 Filetree:
 ```
+├── waybar
+│   ├── config.jsonc
+│   └── style.css
 ├── nvim
 │   └── config.conf
 ├── hypr
