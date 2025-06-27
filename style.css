@@ -1,66 +1,82 @@
-@keyframes rotate_background {
-  0% {
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, rgba(51, 204, 254, 0.93), rgba(0, 255, 153, 0.93)) border-box;
-  }
-  50% {
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(45deg, rgba(51, 204, 254, 0.93), rgba(0, 255, 153, 0.93)) border-box;
-  }
+* {
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 
-#window {
-  border-radius: 8px;
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
-#outer-box {
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, rgba(51, 204, 254, 0.93), rgba(0, 255, 153, 0.93)) border-box;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  animation: rotate_background 1s infinite;
+tooltip {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px rgba(0, 0, 0, 0.2) solid;
 }
 
-#input {
-  border: transparent 2px solid;
-  border-radius: 6px 6px 0 0;
-}
-
-#input:focus {
-  outline: none;
-  border-color: inherit;
-  box-shadow: none;
-  border-bottom-color: rgb(50, 50, 50);
-}
-
-#scroll {
-  border-radius: 0 0 6px 6px;
-}
-
-#scroll, #entry, #input {
-  background: black;
-}
-
-#img, #entry > * > * > * {
-  padding-right: 5px;
-}
-
-#entry {
-  animation: margin-left 0.3s ease-out;
-}
-
-#entry:selected {
-  outline: 1px rgb(50, 50, 50) solid;
-  margin-left: 5px;
-  border-radius: 8px;
-}
-
-#entry * {
-  outline: 1px rgb(50, 50, 50) solid;
-  background: black;
-}
-
-#input * {
+tooltip label {
   color: white;
+}
+
+#workspaces {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+#workspaces button.focused {
+  background: transparent;
+  border-top: none;
+  box-shadow: none;
+}
+
+#custom-lock,
+#custom-logout,
+#custom-reboot,
+#custom-poweroff {
+  padding: 0 8px;
+}
+
+.modules-left > widget > * {
+  margin-left: 3px;
+}
+
+.modules-right > widget > * {
+  margin-right: 3px;
+}
+
+.module {
+  padding: 0 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  /*border: 1px red solid;*/
+  color: white;
+  border-radius: 5px;
+}
+
+.module * {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: rgba(220, 40, 40, 0.3);
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
