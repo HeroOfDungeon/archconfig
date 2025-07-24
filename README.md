@@ -8,8 +8,6 @@ Filetree:
 │   ├── themes
 │   │   └── red.theme
 │   └── btop.conf
-├── btop
-│   └── config
 ├── neofetch
 │   └── config.conf
 ├── hypr
