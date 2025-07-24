@@ -1,0 +1,131 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    //"spacing": 4, // Gaps between modules (4px)
+    "margin": 0,
+    "padding": 0,
+    "modules-left": [
+      "custom/poweroff",
+      "custom/reboot",
+      //"custom/lock",
+      "hyprland/workspaces",
+      "hyprland/mode",
+      "hyprland/scratchpad"
+    ],
+    "modules-center": [
+      //"custom/user"
+      "clock"
+    ],
+    //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
+    //"modules-right": ["mpd", "idle_inhibitor", "temperature", "cpu", "memory","network", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock"],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "battery",
+      "custom/brightness",
+      "pulseaudio",
+      "network",
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            //"1": "",
+            //"2": "",
+            //"3": "",
+            //"4": "",
+            //"5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "custom/user": {
+      "exec": "echo \"$USER@$HOSTNAME\"",
+      "interval": 3600
+    },
+    "custom/lock": {
+      "format": "",
+      "on-click": "hyprlock",
+      "tooltip": false
+    },
+    "custom/logout": { // Need to figure out how to go back to user selection screen (SUPER + M)
+      "format": "󰗽",
+      "on-click": "exit",
+      "tooltip": false
+    },
+    "custom/reboot": {
+      "format": "",
+      "on-click": "systemctl reboot",
+      "tooltip": false
+    },
+    "custom/poweroff": {
+      "format": "",
+      "on-click": "systemctl poweroff",
+      "tooltip": false
+    },
+    "custom/brightness": {
+      "interval": 1,
+      "format-alt": "{alt}",
+      "exec": "~/.config/waybar/brightness-json.sh",
+      "return-type": "json"
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        //"format-alt": "{:%Y-%m-%d}"
+        //"format": "{:%H:%M}"
+        "format": "{:%H:%M - %A, %d %b %Y}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+//        "tooltip": false
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 25,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 30
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": " {ifname}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠ {ifname}",
+        "format-alt": " {ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{icon}  {volume}% {format_source}",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+//            "headphone": "",
+//            "hands-free": "",
+//            "headset": "",
+//            "phone": "",
+//            "portable": "",
+//            "car": "",
+            "default": ["", "", ""]
+        },
+    }
+}

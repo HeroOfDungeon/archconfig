@@ -1,0 +1,54 @@
+#window {
+  border-radius: 8px;
+}
+
+#outer-box {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, rgba(136, 0, 0, 0.93)/*rgba(51, 204, 254, 0.93)*/, rgba(255, 0, 0, 0.93)/*rgba(0, 255, 153, 0.93)*/) border-box;
+  /*border-radius: 8px;*/
+  border: 2px solid transparent;
+  animation: rotate_background 1s infinite;
+}
+
+#input {
+  border: transparent 2px solid;
+  border-radius: 0; /*6px 6px 0 0*/
+}
+
+#input:focus {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+  border-bottom-color: rgb(50, 50, 50);
+}
+
+#scroll {
+  /*border-radius: 0 0 6px 6px;*/
+}
+
+#scroll, #entry, #input {
+  background: black;
+}
+
+#img, #entry > * > * > * {
+  padding-right: 5px;
+}
+
+#entry {
+  animation: margin-left 0.3s ease-out;
+}
+
+#entry:selected {
+  outline: 1px rgb(50, 50, 50) solid;
+  margin-left: 5px;
+  /*border-radius: 8px;*/
+}
+
+#entry * {
+  outline: 1px rgb(50, 50, 50) solid;
+  background: black;
+}
+
+#input * {
+  color: white;
+}

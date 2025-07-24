@@ -1,0 +1,26 @@
+[mgr] # Global Config
+show_hidden = true
+warp = "no"
+tab_size = 2
+image_filter = "lanczos3"
+
+[opener] # File openers
+firefox-developer-edition = [
+  { run = "firefox-developer-edition $@", for = "unix"}
+]
+
+mpv = [
+  { run = "mpv \"$@\"", for = "unix" }
+]
+
+nvim = [
+  { run = "nvim $@", block = true, for = "unix" }
+]
+
+[open] # Bind openers to filetypes
+prepend_rules = [
+  { mime = "picture/*", use = "firefox-developer-edition" },
+  { mime = "video/*", use = "mpv" },
+  { mime = "text/*", use = "nvim" }
+]
+

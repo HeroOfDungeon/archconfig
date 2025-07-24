@@ -1,0 +1,4 @@
+[icon]
+prepend_conds = [
+  { if = "hidden & id",  text = "👻" },
+]
