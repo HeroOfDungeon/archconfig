@@ -2,12 +2,21 @@ Filetree:
 ```
 ├── waybar
 │   ├── config.jsonc
+│   ├── brightness-json.sh
 │   └── style.css
-├── nvim
+├── btop
+│   ├── themes
+│   │   └── red.theme
+│   └── btop.conf
+├── btop
+│   └── config
+├── neofetch
 │   └── config.conf
 ├── hypr
 │   ├── hyprland.conf
-│   └── hyprlock.conf
+│   ├── hyprlock.conf
+│   ├── hyprpaper.conf
+│   └── hyprsunset.conf
 ├── nvim
 │   ├── stylua.toml
 │   ├── init.lua
@@ -24,6 +33,9 @@ Filetree:
 │       │   │   └── yazi.lua
 │       │   └── settings.lua
 │       └── lazy.lua
+├── yazi
+│   ├── theme.toml
+    └── yazi.toml
 └── wofi
     └── style.css
 ```
