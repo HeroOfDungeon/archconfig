@@ -1,0 +1,87 @@
+return {
+  "folke/tokyonight.nvim",
+  as = "tokyonight-red",
+  name = "tokyonight-red",
+  config = function()
+    require("tokyonight").setup({
+      style = "night",
+      transparent = false,
+
+      on_colors = function(colors)
+        colors.bg = "#000000"
+        colors.bg_dark = "#000000"
+        colors.bg_dark1 = "#000000"
+        colors.bg_float = "#000000"
+        colors.bg_highlight = "#330000"
+        colors.bg_popup = "#000000"
+        colors.bg_search = "#670000"
+        colors.bg_sidebar = "#000000"
+        colors.bg_statusline = "#180000"
+        colors.bg_visual = "#3B0000"
+        colors.black = "#180000"
+        colors.blue = "#B10000"
+        colors.blue0 = "#670000"
+        colors.blue1 = "#990000"
+        colors.blue2 = "#890000"
+        colors.blue5 = "#CC0000"
+        colors.blue6 = "#E10000"
+        colors.blue7 = "#510000"
+        colors.border = "#180000"
+        colors.border_highlight = "#800000"
+        colors.comment = "#6A0000"
+        colors.cyan = "#C30000"
+        colors.dark3 = "#640000"
+        colors.dark5 = "#850000"
+        colors.diff.add = "#2E0000"
+        colors.diff.change = "#260000"
+        colors.diff.delete = "#2C0000"
+        colors.diff.text = "#510000"
+        colors.error = "#7B0000"
+        colors.fg = "#D50000"
+        colors.fg_dark = "#BA0000"
+        colors.fg_float = "#D50000"
+        colors.fg_gutter = "#4A0000"
+        colors.fg_sidebar = "#BA0000"
+        colors.git.add = "#840000"
+        colors.git.change = "#8A0000"
+        colors.git.delete = "#650000"
+        colors.git.ignore = "#640000"
+        colors.green = "#9C0000"
+        colors.green1 = "#B20000"
+        colors.green2 = "#890000"
+        colors.hint = "#7B0000"
+        colors.info = "#890000"
+        colors.magenta = "#C40000"
+        colors.magenta2 = "#7E0000"
+        colors.none = "NONE"
+        colors.orange = "#AB0000"
+        colors.purple = "#A50000"
+        colors.rainbow = { "#B10000", "#A70000", "#9C0000", "#7B0000", "#C40000", "#A50000", "#AB0000", "#A90000" }
+        colors.red = "#A90000"
+        colors.red1 = "#7B0000"
+        colors.teal = "#7B0000"
+        colors.terminal.black = "#180000"
+        colors.terminal.black_bright = "#500000"
+        colors.terminal.blue = "#660000"
+        colors.terminal.blue_bright = "#BE0000"
+        colors.terminal.cyan = "#C30000"
+        colors.terminal.cyan_bright = "#D40000"
+        colors.terminal.green = "#9C0000"
+        colors.terminal.green_bright = "#960000"
+        colors.terminal.magenta = "#C40000"
+        colors.terminal.magenta_bright = "#CF0000"
+        colors.terminal.red = "#A90000"
+        colors.terminal.red_bright = "#B70000"
+        colors.terminal.white = "#330000"
+        colors.terminal.white_bright = "#D50000"
+        colors.terminal.yellow = "#A70000"
+        colors.terminal.yellow_bright = "#AA0000"
+        colors.terminal_black = "#500000"
+        colors.todo = "#B10000"
+        colors.warning = "#A70000"
+        colors.yellow = "#A70000"
+      end,
+    })
+
+  end,
+}
