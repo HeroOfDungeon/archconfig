@@ -1,3 +1,4 @@
+**The filetree is outdated and i'm to lazy to update it - just check the repo?**
 Filetree:
 ```
 ├── waybar
